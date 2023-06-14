@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            #info{
+                width: 300px;
+                height: 500px;
+                background: #bfa;
+                overflow: auto;
+            }
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function(){
+                // 当垂直滚动条滚到底，表单可用
+                // onscroll
+                // 该事件会在元素的滚动条滚动时触发
+
+                // 获取Id为Info的p元素
+                var info = document.getElementById("info");
+
+                var inputs = document.getElementsByTagName("input");
+                info.onscroll = function(){
+                    // 检查垂直滚动是否到底
+                    if(info.scrollHeight - info.scrollTop <= info.clientHeight){
+                        // disabled可以设置一个元素是否禁用,
+                        // 如果true,禁用
+                        // 如果false,可用
+                        // 到底后 ,表单项有用
+                        inputs[0].disabled = false;
+                        inputs[1].disabled = false;
+                    }
+                };
+
+
+                   
+         
+                
+
+
+            };
+        </script>
+
+
+    </head>
+
+    <body>
+        <h3>欢迎用户注册</h3>
+        <p id="info">阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议阅读协议</p>
+        <!-- 如果为表单项添加 disabled="disabled"，则表单项变成不可用状态 -->
+        <input type="checkbox" disabled="disabled">已阅读
+        <input type="submit" value="注册"  disabled="disabled">
+        </div>
+    </body>
+</html>

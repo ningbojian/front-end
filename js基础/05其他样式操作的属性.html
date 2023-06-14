@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            #box1{
+                width: 200px;
+                height: 200px;
+                background: red ;
+                padding: 10px;
+                border: 10px solid yellow; 
+            }
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function(){
+                /**
+                 * 点击按钮以后，读取Box1的样式
+                */
+            //    获取box1
+                var box1 =  document.getElementById("box1");
+
+                var btn01 = document.getElementById("btn01");
+                btn01.onclick = function(){
+                    /**
+                     * clientWidth
+                     * clientHeight
+                     * 
+                     * 可以获取元素可见宽高,包括内容区和内边距
+                     * 返回值不带Px,是数字，可以直接计算
+                     * 这些属性只读，不能改
+                     *
+                     * offsetWidth,offsetHeight
+                     * 获取元素整个宽高，包括内容区，内边距和边框
+                     * 
+                     * offsetParent
+                     * 用来获取当前元素定位的父元素
+                     * 会获取到离当前元素最近的开启了定位的祖先元素，只要
+                     * position值不是默认static，而是relative相对定位，absolute绝对定位,fixed固定定位,sticky粘滞定位
+                     * 如果所有的祖先元素都没有开启定位，则返回body
+                     * 
+                     * 
+                     * offsetLeft当前元素相对于其定位父元素的水平偏移量
+                     * 
+                     * offsetTop当前元素相对其定位父元素的垂直偏移量
+                     * 
+                     * scrollHeight,scrollWidth可以获取元素滚动区域高度
+                     * 
+                     * scrollLeft可以获得水平滚动条滚动距离
+                     * scrollTop可以获得垂直滚动条滚动距离
+                     *  
+                     * scrollHeight - scrollTop == clientHeight说明滚动条滚动到底了
+                     * 
+                     * scrollWidth - scrollLeft == clientWidth说明水平滚动条滚动到底了
+                     * 
+                    */
+                   
+         
+                };
+
+
+            };
+        </script>
+
+
+    </head>
+
+    <body>
+        <buton id="btn01">点我一下</buton>
+
+        <div id="box1">
+
+        </div>
+    </body>
+</html>
